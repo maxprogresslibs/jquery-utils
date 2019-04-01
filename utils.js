@@ -20,7 +20,7 @@ function payload(...objects) {
         var tagName = $(this).prop("tagName").toLowerCase();
 
         if(value !== undefined) {
-            if(tagName === "input") {
+            if(tagName === "input" || tagName === "select" || tagName === "textarea") {
                 return $(this).val(value);
             }
             else {
